@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d4d8ff;
+    width: 100%;
+}
+nav h1{
+    padding: 10px 20px;
+    color: black;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li{
+    padding: 10px 20px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+
+}
+a:hover{
+    color: blue;
+}
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-weight: 400;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 10vw;
+}
+.output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw 10vw;
+}
+.input{
+    width:80vw;
+    height: 30px;
+    resize: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#descp{
+    width: 80vw;
+    height: 30px;
+    resize: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: sans-serif;
+    padding-top: 8px;
+}
+.btn-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-main {
+    padding: 5px;
+    margin: 0 10px 0 0;
+    width: 75px;
+    background-color: blue;
+    color: white;
+    border: 1px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.btn-main:hover{
+    background-color: cornflowerblue;
+}
+.btn {
+    padding: 5px;
+    margin: 6px;
+    width: 50px;
+    background-color: blue;
+    color: white;
+    border: 1px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+/* Table Section */
+table{
+    border-top: 1px solid rgb(225, 225, 255);
+    border-collapse: collapse;
+}
+thead{
+    margin: 0%;
+    padding: 0%;
+}
+th{
+    width: fit-content;
+    padding: 1vw 5vw;
+    border-bottom: 1px solid rgb(225, 225, 255);
+
+}
+td{
+    width: fit-content;
+    padding: 1vw 8vw;
+    border-bottom: 1px solid rgb(225, 225, 255);
+}
