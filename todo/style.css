@@ -49,6 +49,13 @@ h2{
     justify-content: center;
     padding: 1vw 10vw;
 }
+.output h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    font-weight: 400;
+}
 .input{
     width:80vw;
     height: 30px;
@@ -74,7 +81,6 @@ h2{
 .btn-section{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .btn-main {
     padding: 5px;
@@ -110,12 +116,29 @@ thead{
 }
 th{
     width: fit-content;
-    padding: 1vw 5vw;
+    padding: 1vw;
     border-bottom: 1px solid rgb(225, 225, 255);
-
+}
+tr{
+    padding: 1vw;
 }
 td{
     width: fit-content;
-    padding: 1vw 8vw;
+    padding: 1vw;
     border-bottom: 1px solid rgb(225, 225, 255);
+}
+@media only screen and (max-width: 700px ) {
+
+nav{
+  width: 100%;
+}
+.output{
+    padding: 5vw;
+    margin: 0;
+    border: 0;
+}
+nav ul{
+    display: none;
+}
+
 }
