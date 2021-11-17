@@ -7,7 +7,6 @@
 
   <title>ToDo List</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
 </head>
 
 <body>
@@ -19,8 +18,8 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-  <h2>ToDo List</h2>
   <div class="container" id="main">
+    <h2>ToDo List</h2>
     <p class="text1">Title</p>
     <input type="text" id="title" class="input" placeholder="Add Items here">
     <br>
@@ -38,9 +37,9 @@
       <thead>
         <tr>
           <th align="center" class="index">S No</th>
-          <th align="center">Title</th>
-          <th align="center">Description</th>
-          <th align="center">Actions</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody id="tablebody">
@@ -87,8 +86,8 @@
         str += `
       <tr>
           <td align="center" class="index">${index + 1}</td>
-          <td align="center">${element[0]}</td>
-          <td align="auto">${element[1]}</td>
+          <td>${element[0]}</td>
+          <td>${element[1]}</td>
           <td align="center"><button class="btn"onclick="Del(${index})">Delete</button></td>
         </tr>`;
       });
@@ -105,7 +104,6 @@
       localStorage.setItem("Items", JSON.stringify(ItemsArray));
       allUpdate();
     }
-
     function ClearList() {
       if (confirm("It will clear your Todo list data.\nStill want to clear the data?")) {
         localStorage.clear();
@@ -114,5 +112,4 @@
     }
   </script>
 </body>
-
 </html>
