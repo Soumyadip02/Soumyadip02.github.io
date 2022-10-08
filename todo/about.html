@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - About</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Roboto', sans-serif;
+        }
+        nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d4d8ff;
+    width: 100%;
+}
+nav h1{
+    padding: 10px 20px;
+    color: black;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li{
+    padding: 10px 20px;
+}
+.anc{
+    color: black;
+    text-decoration: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.anc:hover{
+    color: blue;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-weight: 400;
+}
+.update{
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+}
+@media only screen and (max-width: 700px ) {
+
+nav{
+  width: 100%;
+}
+nav ul{
+    display: none;
+}
+
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1><a href="index.html">Todo App</a></h1>
+        <ul>
+          <li><a href="index.html" class="anc">Home</a></li>
+          <li><a href="about.html" class="anc">About</a></li>
+          <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+      </nav>
+    <div class="update">
+        <span id="date">Last Updated on 08-10-2022</span>
+        <p class="info">Fixed bugs and improved performance <br>
+        <!-- <a href="https://github.com/soumyadip02">Github</a> -->
+
+        </p>
+    </div>
+</body>
+</html>
