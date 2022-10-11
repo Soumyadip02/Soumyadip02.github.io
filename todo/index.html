@@ -2,119 +2,56 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Todo App</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav>
-    <h1><a href="index.html">Todo App</a></h1>
-    <ul>
-      <li><a href="index.html" class="anc">Home</a></li>
-      <li><a href="about.html" class="anc">About</a></li>
-      <!-- <li><a href="#">Contact</a></li> -->
-    </ul>
-  </nav>
-  <div class="container" id="main">
-    <h2>ToDo List</h2>
-    <p class="text1">Title</p>
-    <input type="text" id="title" class="input" placeholder="Add Items here">
-    <br>
-    <p class="text2">Description</p>
-    <textarea id="descp" placeholder="Add Description"></textarea>
-    <br>
-  </div>
-  <div class="btn-section">
-    <button class="btn-main" id="addto">Add to list</button>
-    <button class="btn-main" id="clist" onclick="ClearList()">Clear List</button>
-  </div>
-  <div class="output">
-    <h2>Your Todo Items</h2>
-    <table>
-      <thead>
-        <tr>
-          <th align="center" class="index">S No</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody id="tablebody">
-        <tr>
-          <td>0</td>
-          <td>Title</td>
-          <td>Description</td>
-          <td><button class="btn" onclick="Del($,{index})">Delete</button> </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <script>
-    function Update() {
-      title = document.getElementById("title").value;
-      descp = document.getElementById("descp").value;
-      if (localStorage.getItem("Items") == null) {
-        ItemsArray = [];
-        ItemsArray.push([title, descp]);
-        localStorage.setItem("Items", JSON.stringify(ItemsArray));
-      }
-      else {
-        ItemsArraystr = localStorage.getItem("Items")
-        ItemsArray = JSON.parse(ItemsArraystr);
-        ItemsArray.push([title, descp]);
-        localStorage.setItem("Items", JSON.stringify(ItemsArray));
-      };
-      allUpdate();
-      //code to clear the text fields
-      if (title != "" || descp != ""){
-        document.getElementById("title").value = "";
-        descp = document.getElementById("descp").value ="";
-      }
-      
-    }
-    function allUpdate() {
-      if (localStorage.getItem("Items") == null) {
-        ItemsArray = [];
-        localStorage.setItem("Items", JSON.stringify(ItemsArray));
-      }
-      else {
-        ItemsArraystr = localStorage.getItem("Items")
-        ItemsArray = JSON.parse(ItemsArraystr);
-        localStorage.setItem("Items", JSON.stringify(ItemsArray));
-      }
-      let tablebody = document.getElementById("tablebody");
-      let str = "";
-      ItemsArray.forEach((element, index) => {
-        str += `
-      <tr>
-          <td align="center" class="index">${index + 1}</td>
-          <td>${element[0]}</td>
-          <td>${element[1]}</td>
-          <td align="center"><button class="btn"onclick="Del(${index})">Delete</button></td>
-        </tr>`;
-      });
-      tablebody.innerHTML = str;
-    }
-    addto = document.getElementById("addto");
-    addto.addEventListener("click", Update);
-    allUpdate();
-
-    function Del(Itemsindex) {
-      ItemsArraystr = localStorage.getItem("Items")
-      ItemsArray = JSON.parse(ItemsArraystr);
-      ItemsArray.splice(Itemsindex, 1)
-      localStorage.setItem("Items", JSON.stringify(ItemsArray));
-      allUpdate();
-    }
-    function ClearList() {
-      if (confirm("It will clear your Todo list data.\nStill want to clear the data?")) {
-        localStorage.clear();
-        allUpdate();
-      }
-    }
-  </script>
+    <nav>
+        <h1><a href="index.html">Todo App</a></h1>
+        <ul>
+            <li><a href="index.html" class="anc">Home</a></li>
+            <li><a href="about.html" class="anc">About</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+        </ul>
+    </nav>
+    <div class="container" id="main">
+        <h2>ToDo List</h2>
+        <p class="text1">Title</p>
+        <input type="text" id="title" class="input" placeholder="Add Items here">
+        <br>
+        <p class="text2">Description</p>
+        <textarea id="descp" placeholder="Add Description"></textarea>
+        <br>
+    </div>
+    <div class="btn-section">
+        <button class="btn-main" id="addto">Add to list</button>
+        <button class="btn-main" id="clist" onclick="ClearList()">Clear List</button>
+    </div>
+    <div class="output">
+        <h2>Your Todo Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th align="center" class="index">S No</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+                <tr>
+                    <td>0</td>
+                    <td>Title</td>
+                    <td>Description</td>
+                    <td><button class="btn" onclick="Del($,{index})">Delete</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <script src="script.js"></script>
 </body>
 </html>
