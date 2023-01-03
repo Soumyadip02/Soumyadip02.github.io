@@ -91,7 +91,7 @@ h2{
 .btn-main {
     padding: 5px;
     margin: 0 10px 0 0;
-    width: 80px;
+    width: 100px;
     background-color: blue;
     color: white;
     border: 1px;
@@ -101,7 +101,7 @@ h2{
 .btn {
     padding: 5px;
     margin: 6px;
-    width: 60px;
+    width: 54px;
     background-color: blue;
     color: white;
     border: 1px;
