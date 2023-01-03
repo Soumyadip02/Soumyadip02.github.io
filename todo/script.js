@@ -1,6 +1,11 @@
 function Update() {
+
  title = document.getElementById("title").value;
  descp = document.getElementById("descp").value;
+   if(title == '' && descp == ''){
+       alert("No data to add to list");
+     }
+   else {
     if (localStorage.getItem("Items") == null) {
         ItemsArray = [];
         ItemsArray.push([title, descp]);
@@ -19,6 +24,7 @@ function Update() {
         descp = document.getElementById("descp").value = "";
     }
 
+}
 }
 function allUpdate() {
     if (localStorage.getItem("Items") == null) {
