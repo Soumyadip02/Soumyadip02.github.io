@@ -101,12 +101,12 @@ h2{
 .btn {
     padding: 5px;
     margin: 6px;
-    width: 50px;
+    width: 54px;
     background-color: blue;
     color: white;
     border: 1px;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 12px;
 }
 /* Table Section */
 table{
