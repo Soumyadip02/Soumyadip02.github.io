@@ -3,7 +3,7 @@ function Update() {
  title = document.getElementById("title").value;
  descp = document.getElementById("descp").value;
    if(title == '' && descp == ''){
-       alert("No data to add to list");
+       alert("No data to add to list\nPlease enter data to add😘");
      }
    else {
     if (localStorage.getItem("Items") == null) {
