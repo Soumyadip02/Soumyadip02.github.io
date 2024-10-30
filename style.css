@@ -10,12 +10,12 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d4d8ff;
+    background-color: #488eff;
     width: 100%;
 }
 nav h1{
     padding: 10px 20px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 nav ul{
@@ -27,15 +27,15 @@ li{
     padding: 10px 20px;
 }
 .anc{
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 a{
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 .anc:hover{
-    color: blue;
+    color: rgb(1, 1, 32);
 }
 h2{
     display: flex;
@@ -67,7 +67,7 @@ h2{
     height: 30px;
     resize: none;
     outline: none;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid rgb(39, 136, 255);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -77,7 +77,7 @@ h2{
     height: 22px;
     resize: none;
     outline: none;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid rgb(39, 136, 255);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -92,7 +92,7 @@ h2{
     padding: 5px;
     margin: 0 10px 0 0;
     width: 75px;
-    background-color: blue;
+    background-color: rgb(0, 153, 255);
     color: white;
     border: 1px;
     border-radius: 3px;
