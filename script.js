@@ -54,11 +54,13 @@ addto.addEventListener("click", Update);
 allUpdate();
 
 function Del(Itemsindex) {
+    if (confirm("It will delete this todo task.\nStill want to delete this task?")) {
     ItemsArraystr = localStorage.getItem("Items")
     ItemsArray = JSON.parse(ItemsArraystr);
     ItemsArray.splice(Itemsindex, 1)
     localStorage.setItem("Items", JSON.stringify(ItemsArray));
     allUpdate();
+}
 }
 function ClearList() {
     if (confirm("It will clear your Todo list data.\nStill want to clear the data?")) {
